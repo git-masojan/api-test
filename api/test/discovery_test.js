@@ -1,7 +1,7 @@
-const assert = require('chai');
+const assert = require('chai').expect;
 
-const page = require('../page/discovery_page.js');
-const schema = require('../schema/discovery_schema.json')
+const page = require('../../api/page/discovery_page.js');
+const schema = require('../schema/discovery_schema.json');
 
 const testCase = {
  "positive" : {
@@ -20,7 +20,6 @@ describe(`Discovery List`, () => {
  it(`@get ${testCase.positive.getListWeb}`, async() => {
   const response = await page.getDiscovery("website");
   assert(response.status).to.equal(200, response.body.message);
-  assert(response.body).to.be.JSON(schema);
  }),
 
  it(`@get ${testCase.positive.getListApps}`, async() => {
