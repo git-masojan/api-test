@@ -1,0 +1,141 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2020-02-07T04:20:45.242Z",
+    "end": "2020-02-07T04:20:45.263Z",
+    "duration": 21,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "1e588dc8-085e-4829-ae17-c231469ccb98",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "cc0cad3c-447b-460c-b6de-1bdadc60fdbf",
+        "title": "Discovery List",
+        "fullFile": "/Users/styletheory/Documents/api-test/api/test/discovery_test.js",
+        "file": "/api/test/discovery_test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "@get As a User, I want to be able to get Discovery list from website",
+            "fullTitle": "Discovery List @get As a User, I want to be able to get Discovery list from website",
+            "timedOut": false,
+            "duration": 5,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "const response = await page.getDiscovery(\"website\");\nassert(response.status).to.equal(200, response.body.message);\nassert(response.body).to.be.JSON(schema);",
+            "err": {
+              "message": "TypeError: Cannot read property 'address' of undefined",
+              "estack": "TypeError: Cannot read property 'address' of undefined\n    at Test.serverAddress (node_modules/supertest/lib/test.js:55:18)\n    at new Test (node_modules/supertest/lib/test.js:36:12)\n    at Object.obj.<computed> [as get] (node_modules/supertest/index.js:25:14)\n    at Object.getDiscovery (api/page/discovery_page.js:6:36)\n    at Context.<anonymous> (api/test/discovery_test.js:21:31)\n    at processImmediate (internal/timers.js:456:21)"
+            },
+            "isRoot": false,
+            "uuid": "5bd71fad-a04a-445d-a0c7-55f7c7dcd5b6",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "@get As a User, I want to be able to get Discovery list from apps",
+            "fullTitle": "Discovery List @get As a User, I want to be able to get Discovery list from apps",
+            "timedOut": false,
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "const response = await page.getDiscovery(\"mobile\");\nassert(response.status).to.equal(200);",
+            "err": {
+              "message": "TypeError: Cannot read property 'address' of undefined",
+              "estack": "TypeError: Cannot read property 'address' of undefined\n    at Test.serverAddress (node_modules/supertest/lib/test.js:55:18)\n    at new Test (node_modules/supertest/lib/test.js:36:12)\n    at Object.obj.<computed> [as get] (node_modules/supertest/index.js:25:14)\n    at Object.getDiscovery (api/page/discovery_page.js:6:36)\n    at Context.<anonymous> (api/test/discovery_test.js:27:33)\n    at processImmediate (internal/timers.js:456:21)"
+            },
+            "isRoot": false,
+            "uuid": "c1e6c18e-8a78-4196-b822-6025c0fa083e",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "5bd71fad-a04a-445d-a0c7-55f7c7dcd5b6",
+          "c1e6c18e-8a78-4196-b822-6025c0fa083e"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 5,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      },
+      {
+        "uuid": "68a97ea6-1633-4e5f-a70c-1d54835386c0",
+        "title": "Discovery List unavailable",
+        "fullFile": "/Users/styletheory/Documents/api-test/api/test/discovery_test.js",
+        "file": "/api/test/discovery_test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "@get As a User, I should got error 500 when I send request with invalid platform",
+            "fullTitle": "Discovery List unavailable @get As a User, I should got error 500 when I send request with invalid platform",
+            "timedOut": false,
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "const response = await page.getDiscovery(error);\nassert(response.status).to.equal(500, response.body.Error);",
+            "err": {
+              "message": "TypeError: Cannot read property 'address' of undefined",
+              "estack": "TypeError: Cannot read property 'address' of undefined\n    at Test.serverAddress (node_modules/supertest/lib/test.js:55:18)\n    at new Test (node_modules/supertest/lib/test.js:36:12)\n    at Object.obj.<computed> [as get] (node_modules/supertest/index.js:25:14)\n    at Object.getDiscovery (api/page/discovery_page.js:6:36)\n    at Context.<anonymous> (api/test/discovery_test.js:36:37)\n    at processImmediate (internal/timers.js:456:21)"
+            },
+            "isRoot": false,
+            "uuid": "8f6c68f9-7e29-42e2-980d-958ae4f3a69d",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "8f6c68f9-7e29-42e2-980d-958ae4f3a69d"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 180000
+  },
+  "copyrightYear": 2020
+}
