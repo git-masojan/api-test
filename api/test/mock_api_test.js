@@ -6,17 +6,18 @@ const data = require('../data/mock_api_data.json');
 
 const testCase = {
  "positive" : {
-    "getID" : "As a User, I want to be able to get 201"
- },
+    "success" : "As a User, I want to be able to create resource"
 
+ }
 
 }
 
+
 describe(`mock-api`, () => {
 
- it(`@getID ${testCase.positive.getID}`, async() => {
-  const response = await page.getId(data);
-  assert(response.status).to.equal(200, response.body.message);
+ it(`@success ${testCase.positive.success}`, async() => {
+  const response = await page.postMockApi(data);
+  assert(response.status).to.equal(201, console.log(response.body.message));
  })
 
 })

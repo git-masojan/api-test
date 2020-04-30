@@ -1,25 +1,25 @@
 {
   "stats": {
-    "suites": 3,
-    "tests": 4,
-    "passes": 3,
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-04-28T22:52:17.582Z",
-    "end": "2020-04-28T22:52:18.322Z",
-    "duration": 740,
-    "testsRegistered": 4,
-    "passPercent": 75,
+    "failures": 0,
+    "start": "2020-04-30T03:56:09.104Z",
+    "end": "2020-04-30T03:56:09.536Z",
+    "duration": 432,
+    "testsRegistered": 1,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "passPercentClass": "warning",
+    "passPercentClass": "success",
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "49cc085f-23fe-4ae4-9139-c46abd4d4551",
+    "uuid": "7d2ff38d-b726-4e3d-889f-0816963543a4",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,101 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "433630d1-222a-4eda-bf7a-bbf7b97f6201",
-        "title": "Discovery List",
-        "fullFile": "/Users/styletheory/Documents/api/api-test/api/test/discovery_test.js",
-        "file": "/api/test/discovery_test.js",
-        "beforeHooks": [],
-        "afterHooks": [],
-        "tests": [
-          {
-            "title": "@get As a User, I want to be able to get Discovery list from website",
-            "fullTitle": "Discovery List @get As a User, I want to be able to get Discovery list from website",
-            "timedOut": false,
-            "duration": 142,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
-            "fail": false,
-            "pending": false,
-            "code": "const response = await page.getDiscovery(\"website\");\nassert(response.status).to.equal(200, response.body.message);",
-            "err": {},
-            "isRoot": false,
-            "uuid": "9f73848a-3213-4946-84c7-8c88fac5f52f",
-            "isHook": false,
-            "skipped": false
-          },
-          {
-            "title": "@get As a User, I want to be able to get Discovery list from apps",
-            "fullTitle": "Discovery List @get As a User, I want to be able to get Discovery list from apps",
-            "timedOut": false,
-            "duration": 100,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
-            "fail": false,
-            "pending": false,
-            "code": "const response = await page.getDiscovery(\"mobile\");\nassert(response.status).to.equal(200);",
-            "err": {},
-            "isRoot": false,
-            "uuid": "ef7aee0e-ac61-4118-b3e9-9fbcf1125782",
-            "isHook": false,
-            "skipped": false
-          }
-        ],
-        "suites": [],
-        "passes": [
-          "9f73848a-3213-4946-84c7-8c88fac5f52f",
-          "ef7aee0e-ac61-4118-b3e9-9fbcf1125782"
-        ],
-        "failures": [],
-        "pending": [],
-        "skipped": [],
-        "duration": 242,
-        "root": false,
-        "rootEmpty": false,
-        "_timeout": 180000
-      },
-      {
-        "uuid": "0a6dfc6c-b033-42a8-b241-004bb3f2bdae",
-        "title": "Discovery List unavailable",
-        "fullFile": "/Users/styletheory/Documents/api/api-test/api/test/discovery_test.js",
-        "file": "/api/test/discovery_test.js",
-        "beforeHooks": [],
-        "afterHooks": [],
-        "tests": [
-          {
-            "title": "@get As a User, I should got error 500 when I send request with invalid platform",
-            "fullTitle": "Discovery List unavailable @get As a User, I should got error 500 when I send request with invalid platform",
-            "timedOut": false,
-            "duration": 94,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
-            "fail": false,
-            "pending": false,
-            "code": "const response = await page.getDiscovery(error);\nassert(response.status).to.equal(500, response.body.Error);",
-            "err": {},
-            "isRoot": false,
-            "uuid": "38a00d2f-83d3-4bd5-bb4b-575402304947",
-            "isHook": false,
-            "skipped": false
-          }
-        ],
-        "suites": [],
-        "passes": [
-          "38a00d2f-83d3-4bd5-bb4b-575402304947"
-        ],
-        "failures": [],
-        "pending": [],
-        "skipped": [],
-        "duration": 94,
-        "root": false,
-        "rootEmpty": false,
-        "_timeout": 180000
-      },
-      {
-        "uuid": "318f5bbb-6ae9-469e-b936-44370893b329",
+        "uuid": "6c8372aa-280a-4422-9107-06ca99436464",
         "title": "mock-api",
         "fullFile": "/Users/styletheory/Documents/api/api-test/api/test/mock_api_test.js",
         "file": "/api/test/mock_api_test.js",
@@ -130,34 +36,31 @@
         "afterHooks": [],
         "tests": [
           {
-            "title": "@getID As a User, I want to be able to get 201",
-            "fullTitle": "mock-api @getID As a User, I want to be able to get 201",
+            "title": "@success As a User, I want to be able to create resource",
+            "fullTitle": "mock-api @success As a User, I want to be able to create resource",
             "timedOut": false,
-            "duration": 380,
-            "state": "failed",
-            "pass": false,
-            "fail": true,
+            "duration": 422,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
             "pending": false,
-            "code": "const response = await page.getId(data);\nassert(response.status).to.equal(200, response.body.message);",
-            "err": {
-              "message": "AssertionError: Resource has been created: expected 201 to equal 200",
-              "estack": "AssertionError: Resource has been created: expected 201 to equal 200\n    at Context.<anonymous> (api/test/mock_api_test.js:19:30)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)",
-              "diff": "- 201\n+ 200\n"
-            },
+            "code": "const response = await page.postMockApi(data);\nassert(response.status).to.equal(201, console.log(response.body.message));",
+            "err": {},
             "isRoot": false,
-            "uuid": "8faec5a7-0a1a-4df0-bcfb-6b04c702b7d7",
+            "uuid": "99792ce0-0c1e-4424-825a-dbe9ebd9e538",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
-        "passes": [],
-        "failures": [
-          "8faec5a7-0a1a-4df0-bcfb-6b04c702b7d7"
+        "passes": [
+          "99792ce0-0c1e-4424-825a-dbe9ebd9e538"
         ],
+        "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 380,
+        "duration": 422,
         "root": false,
         "rootEmpty": false,
         "_timeout": 180000
