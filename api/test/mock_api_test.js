@@ -13,15 +13,9 @@ const testCase = {
 }
 
 describe(`mock-api`, () => {
-   console.log(data)
-   console.log(page)
-   console.log(assert)
-   console.log(chai)
-   console.log(JSON.stringify(JSON))
 
  it(`@getID ${testCase.positive.postID}`, async() => {
    const response = await page.postId(data);
-   console.log(response);
    assert(response.status).to.equal(201);
    
  })
